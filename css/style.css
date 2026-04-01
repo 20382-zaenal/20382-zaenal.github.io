@@ -1,0 +1,240 @@
+*,
+html {
+    margin: 0;
+    padding: 0;
+}
+body {
+}
+.top-main {
+    display: block;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+}
+.top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 10vh;
+    background-color:black;
+    box-shadow: 0px 12px 5px -10px rgb(255, 255, 255);
+    border-bottom:1vh solid red;
+}
+header {
+    display: flex;
+    justify-content: start;
+    width: 30%;
+}
+header h3 {
+    display: flex;
+    justify-content: center;
+    width:70%;
+    font-size: 4.5vh;
+    background-color: red;
+    color: black;
+     border-radius: 2vh;
+     margin-left:2vh;
+}
+#nav-ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3vh;
+    margin-right:2vh;
+}
+#nav-li {
+    margin-top: 4vh;
+    transition: 1s ease-in-out;
+}
+#nav-li a {
+    color: white;
+    list-style-type: none;
+    font-size: 3vh;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: inter, sans-serif;
+    font-style: inter;
+}
+#main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 85vh;
+}
+#bg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+    height: 80%;
+    background-color: black;
+    margin-right: 5vh;
+    margin-left: 5vh;
+    box-shadow: 0px 0px 41px 11px rgba(255, 0, 0, 1.00);
+    border-radius: 2vh;
+}
+#bg-header {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+    height: 85%;
+}
+#bg-font {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    font-style: none;
+    color: white;
+}
+
+#bg-font h1 {
+    font-size: 10vh;
+    font-family: inter, sans-serif;
+    font-style: inter;
+    margin-left: 2%;
+    margin-top: 5%;
+    width: 10vh;
+    height: 1vh;
+}
+#bg-font h3 {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25vh;
+    background-color: red;
+    border-radius: 2vh;
+    width: 43vh;
+    color: black;
+    font-size: 5vh;
+    font-family: inter, sans-serif;
+    font-style: inter;
+}
+#kotak {
+    margin-left: 5vh;
+    width: 80%;
+    height: 30%;
+    background-color: red;
+    border-radius: 5vh;
+    margin-bottom: 10vh;
+}
+#bg-img {
+    background-color: red;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 100%;
+    box-shadow: 0px 0px 41px 11px rgba(255, 0, 0, 1.00);
+    border-radius:12vh 3px 3px 12vh;
+}
+@keyframes animasi {
+}
+
+.prolog {
+    width: 100%;
+    height: 85vh;
+    display:flex;
+  justify-content: center;
+  align-items: center;
+}
+.prolog-isi{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  width:80%;
+  height:75vh;
+  background-color:rgb(42,42,42);
+  border-radius:5vh 15vh 15vh 5vh;
+}
+.prolog-foto{
+  width:50%;
+  height:75vh;
+  background-color: red;
+  border-radius:5vh 15vh 15vh 5vh;
+  display:grid;
+  justify-content: center;
+  align-items: center;
+}
+.prolog-text{
+  display:grid;
+  justify-content: center;
+  align-items: center;
+  width:55%;
+  height:75vh;
+  background-color:rgb(42,42,42);
+  border-radius:5vh 15vh 15vh 5vh;
+  margin-left:5vh;
+
+}
+.panel-size{
+  display:grid;
+  justify-content: center;
+  align-items: center;
+  width:100%;
+  height: 85vh;
+  
+}
+.card-sekolah{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  width:100%;
+  height: 70vh;
+  background-color: rgb(42,42,42);
+  margin: 5vh;
+  border-radius:5vh;
+}
+.card-main {
+  background-color: rgb(42,42,42) ;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  width:100vh;
+  height:60vh;
+  border-radius:5vh;
+}
+.card2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:100%;
+  height:30vh;
+  font-size:4vh;
+}
+.organisasi-main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:80%;
+}
+.organisasi-isi{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top:15vh;
+  margin-left:15vh;
+}
+.main-contactme{
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  width:80vh;
+  height:80vh;
+  background-color:rgb(42,42,42);
+  margin-top:5vh;
+  border-radius:5vh;
+    margin-left:3vh;
+}
+.mediasosial {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color:white;
+  width:30vh;
+  height:10vh;
+  gap:1vh;
+  border-radius:3vh;
+  margin-bottom:5vh;
+}
