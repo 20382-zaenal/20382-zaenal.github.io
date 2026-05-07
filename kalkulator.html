@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator || WWW.NGASAL.COM</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #1a1a2e;
+            color: white;
+            padding: 20px;
+        }
+
+        /* Container utama untuk Kalkulator + Riwayat */
+        .main-container {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .calculator {
+            background: #16213e;
+            padding: 25px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+            width: 320px;
+        }
+
+        /* Panel Riwayat */
+        .history-panel {
+            background: rgba(255, 255, 255, 0.05);
+            width: 250px;
+            border-radius: 20px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .history-panel h3 {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            color: #4cc9f0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 10px;
+        }
+
+        #history-list {
+            list-style: none;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+
+        .history-item {
+            font-size: 0.9rem;
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            color: #bdc3c7;
+            cursor: pointer;
+        }
+
+        .history-item:hover { color: white; }
+
+        /* Styling Kalkulator */
+        #display {
+            width: 100%;
+            height: 60px;
+            background: #0f3460;
+            border: none;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            color: #4cc9f0;
+            font-size: 1.8rem;
+            text-align: right;
+            padding: 10px 15px;
+            outline: none;
+        }
+
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+
+        button {
+            height: 55px;
+            border-radius: 10px;
+            border: none;
+            background: #0f3460;
+            color: white;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        button:hover { background: #e94560; }
+
+        .operator { background: #533483; }
+        .equal { background: #e94560; grid-column: span 2; }
+        .clear { background: #393e46; }
+
+        /* Custom scrollbar untuk riwayat */
+        #history-list::-webkit-scrollbar { width: 5px; }
+        #history-list::-webkit-scrollbar-thumb { background: #4cc9f0; border-radius: 10px; }
+    </style>
+</head>
+<body>
+
+<div class="main-container">
+    <!-- Kalkulator -->
+    <div class="calculator">
+        <input type="text" id="display" readonly placeholder="0">
+        <div class="buttons">
+            <button class="clear" onclick="clearDisplay()">C</button>
+            <button class="operator" onclick="appendValue('/')">÷</button>
+            <button class="operator" onclick="appendValue('*')">×</button>
+            <button class="operator" onclick="deleteLast()">⌫</button>
+            
+            <button onclick="appendValue('7')">7</button>
+            <button onclick="appendValue('8')">8</button>
+            <button onclick="appendValue('9')">9</button>
+            <button class="operator" onclick="appendValue('-')">−</button>
+            
+            <button onclick="appendValue('4')">4</button>
+            <button onclick="appendValue('5')">5</button>
+            <button onclick="appendValue('6')">6</button>
+            <button class="operator" onclick="appendValue('+')">+</button>
+            
+            <button onclick="appendValue('1')">1</button>
+            <button onclick="appendValue('2')">2</button>
+            <button onclick="appendValue('3')">3</button>
+            <button onclick="appendValue('.')">.</button>
+            
+            <button onclick="appendValue('0')">0</button>
+            <button class="equal" onclick="calculate()">=</button>
+        </div>
+    </div>
+
+    <!-- Riwayat -->
+    <div class="history-panel">
+        <h3>Riwayat</h3>
+        <ul id="history-list">
+            <!-- Data riwayat akan muncul di sini -->
+        </ul>
+        <button onclick="clearHistory()" style="margin-top: 15px; height: 35px; font-size: 0.8rem; background: transparent; border: 1px solid #e94560;">Hapus Riwayat</button>
+    </div>
+</div>
+
+<script>
+    const display = document.getElementById('display');
+    const historyList = document.getElementById('history-list');
+
+    function appendValue(value) {
+        display.value += value;
+    }
+
+    function clearDisplay() {
+        display.value = "";
+    }
+
+    function deleteLast() {
+        display.value = display.value.slice(0, -1);
+    }
+
+    function calculate() {
+        const expression = display.value;
+        if (!expression) return;
+
+        try {
+            const result = new Function('return ' + expression)();
+            
+            // Tambahkan ke riwayat
+            addHistory(expression, result);
+            
+            display.value = result;
+        } catch (error) {
+            display.value = "Error";
+            setTimeout(clearDisplay, 1500);
+        }
+    }
+
+    function addHistory(expr, res) {
+        const li = document.createElement('li');
+        li.className = 'history-item';
+        li.innerHTML = `${expr} = <strong>${res}</strong>`;
+        // Jika diklik, angka hasil masuk kembali ke display
+        li.onclick = () => display.value = res;
+        
+        historyList.prepend(li); // Tambah yang terbaru di paling atas
+    }
+
+    function clearHistory() {
+        historyList.innerHTML = "";
+    }
+</script>
+
+</body>
+</html>
