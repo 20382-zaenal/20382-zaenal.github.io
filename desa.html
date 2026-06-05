@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Desa Karangmangu – Kecamatan Sigaluh,Kabupaten Banjarnegara</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+:root{
+  --h:#1a6b3c;--hm:#2d9c5b;--ht:#4ade80;
+  --e:#d4a017;--em:#f4c842;
+  --w:#fff;--k:#faf7f0;--ab:#f1f0eb;
+  --t:#1a1a1a;--ts:#5a5a5a;
+  --sh:0 4px 24px rgba(26,107,60,0.13);
+  --r:16px;--rs:8px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--k);color:var(--t);overflow-x:hidden}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(255,255,255,0.96);backdrop-filter:blur(14px);border-bottom:1px solid rgba(26,107,60,0.1);transition:all .3s}
+nav.scrolled{box-shadow:0 2px 20px rgba(0,0,0,0.1)}
+.ni{max-width:1200px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:64px}
+.nlogo{display:flex;align-items:center;gap:12px;text-decoration:none}
+.nlogo .lc{width:40px;height:40px;background:linear-gradient(135deg,var(--h),var(--hm));border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:18px;font-weight:900;font-family:'Playfair Display',serif;flex-shrink:0}
+.nlogo .lt .na{font-weight:700;font-size:14px;color:var(--h)}
+.nlogo .lt .kc{font-size:11px;color:var(--ts)}
+.nlinks{display:flex;gap:2px;list-style:none}
+.nlinks a{text-decoration:none;font-size:12.5px;font-weight:500;color:var(--ts);padding:6px 10px;border-radius:8px;transition:all .2s}
+.nlinks a:hover,.nlinks a.active{background:rgba(26,107,60,0.08);color:var(--h)}
+.ncta{background:var(--h);color:#fff!important;padding:8px 16px!important;border-radius:20px!important}
+.ncta:hover{background:var(--hm)!important}
+.ham{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;border:none;background:none}
+.ham span{width:24px;height:2px;background:var(--t);border-radius:2px;transition:all .3s;display:block}
+.ham.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.ham.open span:nth-child(2){opacity:0}
+.ham.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.mmenu{display:none;position:fixed;top:64px;left:0;right:0;background:#fff;padding:12px;border-bottom:1px solid rgba(0,0,0,0.07);z-index:999;box-shadow:0 4px 20px rgba(0,0,0,0.1)}
+.mmenu.open{display:block}
+.mmenu a{display:block;padding:11px 16px;text-decoration:none;color:var(--t);font-weight:500;font-size:14px;border-radius:8px;transition:background .2s}
+.mmenu a:hover{background:var(--ab);color:var(--h)}
+
+/* TICKER */
+.ticker-bar{background:var(--h);color:#fff;padding:10px 24px;display:flex;align-items:center;gap:14px;font-size:13px;overflow:hidden}
+.tb-label{background:var(--e);color:#fff;padding:3px 12px;border-radius:20px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;white-space:nowrap}
+.ticker-wrap{flex:1;overflow:hidden}
+.ticker-inner{white-space:nowrap;animation:tick 25s linear infinite;display:inline-block}
+@keyframes tick{0%{transform:translateX(100%)}100%{transform:translateX(-100%)}}
+
+/* HERO */
+#beranda{min-height:100vh;background:linear-gradient(155deg,#0b3520 0%,#1a6b3c 45%,#2d9c5b 80%,#3dbf70 100%);display:flex;align-items:center;position:relative;overflow:hidden;padding-top:64px}
+.hbg{position:absolute;inset:0;pointer-events:none}
+.hbg::before{content:'';position:absolute;top:-15%;right:-8%;width:550px;height:550px;border-radius:50%;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06)}
+.hbg::after{content:'';position:absolute;bottom:-25%;left:-5%;width:380px;height:380px;border-radius:50%;background:rgba(255,255,255,0.025);border:1px solid rgba(255,255,255,0.05)}
+.hleaf{position:absolute;opacity:0.05;font-size:180px;color:#fff;right:5%;top:50%;transform:translateY(-50%);pointer-events:none;animation:fl 7s ease-in-out infinite}
+@keyframes fl{0%,100%{transform:translateY(-50%) rotate(-4deg)}50%{transform:translateY(-55%) rotate(4deg)}}
+.hero-in{max-width:1200px;margin:0 auto;padding:80px 24px;position:relative;z-index:2}
+.hbadge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.2);border-radius:30px;padding:8px 16px;color:rgba(255,255,255,0.9);font-size:13px;font-weight:500;margin-bottom:24px;backdrop-filter:blur(8px)}
+.hbadge i{color:var(--em)}
+.htitle{font-family:'Playfair Display',serif;font-size:clamp(42px,7vw,80px);font-weight:900;color:#fff;line-height:1.05;margin-bottom:8px}
+.htitle .acc{color:var(--em)}
+.hsub{font-size:clamp(14px,2vw,17px);color:rgba(255,255,255,0.75);margin-bottom:32px;max-width:500px;line-height:1.7}
+.hstats{display:flex;gap:28px;margin-bottom:40px;flex-wrap:wrap}
+.hstat .num{font-family:'Playfair Display',serif;font-size:34px;font-weight:900;color:var(--em);line-height:1;display:block}
+.hstat .lbl{font-size:12px;color:rgba(255,255,255,0.6)}
+.hacts{display:flex;gap:12px;flex-wrap:wrap}
+.bp{background:var(--e);color:#fff;padding:13px 28px;border-radius:30px;font-weight:700;font-size:15px;text-decoration:none;border:none;cursor:pointer;transition:all .3s;display:inline-flex;align-items:center;gap:8px;font-family:'Plus Jakarta Sans',sans-serif}
+.bp:hover{background:var(--em);transform:translateY(-2px);box-shadow:0 8px 24px rgba(212,160,23,0.4)}
+.bo{background:transparent;color:#fff;padding:13px 28px;border-radius:30px;font-weight:600;font-size:15px;text-decoration:none;border:2px solid rgba(255,255,255,0.4);cursor:pointer;transition:all .3s;display:inline-flex;align-items:center;gap:8px;font-family:'Plus Jakarta Sans',sans-serif}
+.bo:hover{background:rgba(255,255,255,0.1);border-color:rgba(255,255,255,0.7);transform:translateY(-2px)}
+.scrl{position:absolute;bottom:28px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:6px;color:rgba(255,255,255,0.45);font-size:11px;animation:bn 2s ease-in-out infinite}
+.scrl i{font-size:18px}
+@keyframes bn{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(-7px)}}
+
+/* SECTIONS */
+section{padding:80px 24px}
+.con{max-width:1200px;margin:0 auto}
+.stag{display:inline-flex;align-items:center;gap:6px;background:rgba(26,107,60,0.08);color:var(--h);font-size:12px;font-weight:700;padding:6px 14px;border-radius:20px;margin-bottom:16px;text-transform:uppercase;letter-spacing:1px}
+.stitle{font-family:'Playfair Display',serif;font-size:clamp(26px,4vw,42px);font-weight:700;color:var(--t);line-height:1.2;margin-bottom:14px}
+.stitle .g{color:var(--h)}
+.sdesc{font-size:15px;color:var(--ts);line-height:1.7;max-width:600px;margin-bottom:44px}
+
+/* IDENTITAS */
+#profil{background:#fff}
+.pgrid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.pimg{position:relative}
+.pimgm{width:100%;aspect-ratio:4/3;background:linear-gradient(135deg,var(--h),var(--hm));border-radius:24px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:80px;position:relative;overflow:hidden}
+.pimgm::after{content:'';position:absolute;bottom:0;left:0;right:0;height:45%;background:linear-gradient(to top,rgba(0,0,0,0.28),transparent)}
+.pbadge{position:absolute;bottom:-14px;left:24px;background:#fff;border-radius:12px;padding:11px 18px;box-shadow:var(--sh);display:flex;align-items:center;gap:10px}
+.pbadge i{color:var(--h);font-size:18px}
+.pbadge .pv{font-weight:700;font-size:17px;color:var(--t)}
+.pbadge .pl{font-size:11px;color:var(--ts)}
+.pinfo{display:flex;flex-direction:column;gap:20px}
+.pcard{background:var(--k);border-radius:var(--r);padding:20px 22px;border-left:4px solid var(--h);transition:transform .2s}
+.pcard:hover{transform:translateX(4px)}
+.pcard h4{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--h);margin-bottom:6px}
+.pcard p{font-size:14px;color:var(--t);line-height:1.6}
+
+/* BATAS WILAYAH TABLE */
+.batas-table{width:100%;border-collapse:collapse;font-size:14px;margin-top:6px}
+.batas-table td{padding:4px 8px}
+.batas-table td:first-child{font-weight:700;color:var(--h);width:70px}
+.batas-table td:last-child{color:var(--t)}
+
+/* VISI MISI */
+.vmgrid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:52px}
+.vmcard{background:var(--k);border-radius:var(--r);padding:28px;position:relative;overflow:hidden;transition:transform .3s,box-shadow .3s}
+.vmcard:hover{transform:translateY(-4px);box-shadow:var(--sh)}
+.vmcard::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--h),var(--e))}
+.vmcard .ico{width:48px;height:48px;background:linear-gradient(135deg,var(--h),var(--hm));border-radius:12px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:20px;margin-bottom:18px}
+.vmcard h3{font-family:'Playfair Display',serif;font-size:20px;font-weight:700;margin-bottom:10px;color:var(--h)}
+.vmcard p{font-size:14px;color:var(--ts);line-height:1.7;font-style:italic}
+.vmcard ul{list-style:none;display:flex;flex-direction:column;gap:7px;margin-top:6px}
+.vmcard ul li{font-size:13.5px;color:var(--ts);display:flex;align-items:flex-start;gap:7px;line-height:1.5}
+.vmcard ul li::before{content:'✦';color:var(--e);font-size:9px;margin-top:5px;flex-shrink:0}
+
+/* KEPENDUDUKAN */
+#statistik{background:var(--k)}
+.stop{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-bottom:44px}
+.sbig{background:#fff;border-radius:var(--r);padding:24px;text-align:center;transition:all .3s;position:relative;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,0.05)}
+.sbig::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--h),var(--e));transform:scaleX(0);transition:transform .3s}
+.sbig:hover{transform:translateY(-4px);box-shadow:var(--sh)}
+.sbig:hover::after{transform:scaleX(1)}
+.sbig .ico{font-size:26px;margin-bottom:10px;color:var(--h)}
+.sbig .val{font-family:'Playfair Display',serif;font-size:34px;font-weight:900;color:var(--h);line-height:1;display:block;margin-bottom:3px}
+.sbig .lab{font-size:12.5px;color:var(--ts);font-weight:500}
+
+/* KEPENDUDUKAN DETAIL */
+.kpd-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:32px}
+.kpd-card{background:#fff;border-radius:var(--r);padding:26px;box-shadow:0 2px 10px rgba(0,0,0,0.05)}
+.kpd-card h3{font-size:14px;font-weight:700;color:var(--h);margin-bottom:16px;display:flex;align-items:center;gap:8px;text-transform:uppercase;letter-spacing:.5px}
+.kpd-row{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid rgba(0,0,0,0.05);font-size:13.5px}
+.kpd-row:last-child{border-bottom:none}
+.kpd-row .kl{color:var(--ts)}
+.kpd-row .kv{font-weight:700;color:var(--t)}
+
+.cgrid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:22px}
+.ccard{background:#fff;border-radius:var(--r);padding:24px;box-shadow:0 2px 10px rgba(0,0,0,0.05)}
+.ccard h3{font-size:14px;font-weight:700;margin-bottom:18px;color:var(--t);display:flex;align-items:center;gap:7px;text-transform:uppercase;letter-spacing:.5px}
+.ccard h3 i{color:var(--h)}
+.bch{display:flex;flex-direction:column;gap:10px}
+.bi{display:flex;flex-direction:column;gap:3px}
+.bl{display:flex;justify-content:space-between;font-size:12.5px;font-weight:500;color:var(--ts)}
+.bt{height:9px;background:rgba(26,107,60,0.08);border-radius:5px;overflow:hidden}
+.bf{height:100%;border-radius:5px;background:linear-gradient(90deg,var(--h),var(--hm));transition:width 1.5s ease;width:0}
+.bf.e{background:linear-gradient(90deg,var(--e),var(--em))}
+.bf.b{background:linear-gradient(90deg,#a05c2a,#c87a3d)}
+.cnote{font-size:11.5px;color:var(--ts);margin-top:10px;font-style:italic}
+
+/* MATA PENCAHARIAN full width */
+.mp-card{background:#fff;border-radius:var(--r);padding:26px;box-shadow:0 2px 10px rgba(0,0,0,0.05);margin-top:22px}
+.mp-card h3{font-size:14px;font-weight:700;margin-bottom:20px;color:var(--t);display:flex;align-items:center;gap:7px;text-transform:uppercase;letter-spacing:.5px}
+.mp-card h3 i{color:var(--h)}
+.mp-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.mp-item{background:var(--k);border-radius:10px;padding:14px 16px;border-left:3px solid var(--h)}
+.mp-item .mt{font-weight:700;font-size:13.5px;color:var(--t);margin-bottom:4px}
+.mp-item .md{font-size:12.5px;color:var(--ts);line-height:1.5}
+.mp-item .mp{font-size:12px;color:var(--h);font-weight:700;margin-top:6px}
+
+/* POTENSI DESA */
+#umkm{background:#fff}
+.pot-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px}
+.pot-col{background:var(--k);border-radius:var(--r);padding:26px}
+.pot-col .pc-head{display:flex;align-items:center;gap:10px;margin-bottom:18px;padding-bottom:14px;border-bottom:2px solid rgba(26,107,60,0.12)}
+.pot-col .pc-ico{width:42px;height:42px;background:linear-gradient(135deg,var(--h),var(--hm));border-radius:10px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:18px;flex-shrink:0}
+.pot-col .pc-title{font-weight:700;font-size:15px;color:var(--h)}
+.pot-item{display:flex;align-items:flex-start;gap:10px;margin-bottom:12px}
+.pot-item:last-child{margin-bottom:0}
+.pot-num{width:26px;height:26px;background:var(--h);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;flex-shrink:0;margin-top:1px}
+.pot-text{font-size:13.5px;color:var(--ts);line-height:1.5}
+.pot-text strong{color:var(--t)}
+.pariwisata-note{background:rgba(212,160,23,0.08);border:1px dashed rgba(212,160,23,0.4);border-radius:10px;padding:16px;text-align:center;margin-top:8px}
+.pariwisata-note i{font-size:28px;color:var(--e);margin-bottom:8px;display:block}
+.pariwisata-note p{font-size:13px;color:var(--ts);line-height:1.5}
+
+/* FASILITAS UMUM */
+#fasilitas{background:var(--k)}
+.fas-list{display:flex;flex-direction:column;gap:14px;max-width:860px}
+.fas-item{display:flex;align-items:center;gap:18px;background:#fff;border-radius:var(--r);padding:18px 22px;box-shadow:0 2px 10px rgba(0,0,0,0.05);transition:all .3s;cursor:default}
+.fas-item:hover{transform:translateX(8px);box-shadow:var(--sh);border-left:4px solid var(--h)}
+.fas-num{width:44px;height:44px;background:linear-gradient(135deg,var(--h),var(--hm));border-radius:12px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:15px;font-weight:800;flex-shrink:0}
+.fas-emo{font-size:30px;flex-shrink:0}
+.fas-body .ft{font-weight:700;font-size:15.5px;color:var(--t)}
+.fas-body .fd{font-size:13px;color:var(--ts);margin-top:3px}
+
+/* STRUKTUR */
+#struktur{background:#fff}
+.otree{display:flex;flex-direction:column;align-items:center;gap:0;padding:16px 0}
+.olevel{display:flex;justify-content:center;gap:14px;position:relative;flex-wrap:wrap}
+.olevel+.olevel{margin-top:38px}
+.olevel+.olevel::before{content:'';position:absolute;top:-38px;left:50%;width:2px;height:38px;background:linear-gradient(to bottom,var(--h),var(--hm));transform:translateX(-50%)}
+.ocard{background:var(--k);border-radius:var(--r);padding:16px 18px;text-align:center;border:2px solid transparent;transition:all .3s;min-width:148px;max-width:170px}
+.ocard:hover{border-color:var(--hm);transform:translateY(-4px);box-shadow:0 8px 24px rgba(26,107,60,0.14)}
+.ocard.kpd{background:linear-gradient(135deg,var(--h),var(--hm));min-width:190px}
+.ocard.kpd .on,.ocard.kpd .ot{color:#fff}
+.ocard.kpd .ot{color:rgba(255,255,255,0.75)}
+.oav{width:52px;height:52px;border-radius:50%;background:#fff;margin:0 auto 10px;display:flex;align-items:center;justify-content:center;font-size:20px;color:var(--h);border:2px solid rgba(26,107,60,0.12)}
+.ocard.kpd .oav{background:rgba(255,255,255,0.2);color:#fff;border-color:rgba(255,255,255,0.3)}
+.on{font-weight:700;font-size:12.5px;color:var(--t);margin-bottom:3px}
+.ot{font-size:11px;color:var(--ts);text-transform:uppercase;letter-spacing:.3px}
+
+/* GALERI */
+#galeri{background:var(--k)}
+.gfil{display:flex;gap:8px;margin-bottom:28px;flex-wrap:wrap}
+.fbtn{padding:7px 18px;border-radius:30px;border:2px solid rgba(26,107,60,0.2);background:transparent;color:var(--ts);font-size:13px;font-weight:600;cursor:pointer;transition:all .2s;font-family:'Plus Jakarta Sans',sans-serif}
+.fbtn.active,.fbtn:hover{background:var(--h);color:#fff;border-color:var(--h)}
+.ggrid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.gi{border-radius:var(--rs);overflow:hidden;position:relative;cursor:pointer;transition:transform .3s;aspect-ratio:1;background:linear-gradient(135deg,#e8f5e9,#c8e6c9);display:flex;align-items:center;justify-content:center;font-size:44px}
+.gi:nth-child(5){grid-column:span 2;aspect-ratio:2}
+.gi:hover{transform:scale(0.97)}
+.gi:hover .gover{opacity:1}
+.gi:hover .gcap{opacity:1}
+.gover{position:absolute;inset:0;background:rgba(26,107,60,0.68);display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .3s;color:#fff;font-size:28px}
+.gcap{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top,rgba(0,0,0,0.6),transparent);padding:20px 10px 10px;color:#fff;font-size:11.5px;font-weight:600;opacity:0;transition:opacity .3s}
+
+/* BERITA */
+#pengumuman{background:#fff}
+.bgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.bcard{background:var(--k);border-radius:var(--r);overflow:hidden;transition:all .3s}
+.bcard:hover{transform:translateY(-4px);box-shadow:var(--sh)}
+.bhead{height:110px;display:flex;align-items:center;justify-content:center;font-size:44px;background:linear-gradient(135deg,var(--h),var(--hm))}
+.bbody{padding:18px}
+.bdate{font-size:11px;color:var(--ts);font-weight:600;text-transform:uppercase;letter-spacing:1px;margin-bottom:7px}
+.bbody h3{font-size:15px;font-weight:700;margin-bottom:7px;color:var(--t);line-height:1.4}
+.bbody p{font-size:13px;color:var(--ts);line-height:1.6}
+.btag{display:inline-block;background:rgba(26,107,60,0.1);color:var(--h);font-size:11px;font-weight:700;padding:3px 10px;border-radius:20px;margin-top:10px;text-transform:uppercase}
+
+/* KONTAK */
+#kontak{background:var(--k)}
+.kgrid{display:grid;grid-template-columns:1fr 1.5fr;gap:44px;align-items:start}
+.kinfo h3{font-family:'Playfair Display',serif;font-size:26px;font-weight:700;margin-bottom:20px;color:var(--t)}
+.kitem{display:flex;gap:14px;padding:14px 0;border-bottom:1px solid rgba(0,0,0,0.06);align-items:flex-start}
+.kitem:last-child{border-bottom:none}
+.kico{width:42px;height:42px;background:linear-gradient(135deg,var(--h),var(--hm));border-radius:11px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:17px;flex-shrink:0}
+.kitem .klb{font-size:11px;color:var(--ts);margin-bottom:2px;text-transform:uppercase;letter-spacing:.5px;font-weight:600}
+.kitem .kvl{font-size:14px;color:var(--t);font-weight:500;line-height:1.5}
+.mapbox{width:100%;height:180px;background:linear-gradient(135deg,#e8f5e9,#c8e6c9);border-radius:var(--r);margin-top:20px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:7px;color:var(--h);font-size:14px;font-weight:500;border:2px dashed rgba(26,107,60,0.2)}
+.mapbox i{font-size:32px}
+.fcard{background:#fff;border-radius:var(--r);padding:32px;box-shadow:0 2px 16px rgba(0,0,0,0.06)}
+.fcard h3{font-family:'Playfair Display',serif;font-size:20px;font-weight:700;margin-bottom:20px;color:var(--t)}
+.fg{margin-bottom:18px}
+.fg label{display:block;font-size:12.5px;font-weight:700;color:var(--t);margin-bottom:7px}
+.fg input,.fg select,.fg textarea{width:100%;padding:11px 14px;border:2px solid rgba(0,0,0,0.08);border-radius:10px;font-size:13.5px;font-family:'Plus Jakarta Sans',sans-serif;color:var(--t);background:#fff;transition:border-color .2s;outline:none}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--h);box-shadow:0 0 0 3px rgba(26,107,60,0.08)}
+.fg textarea{resize:vertical;min-height:95px}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.bsub{width:100%;background:linear-gradient(135deg,var(--h),var(--hm));color:#fff;border:none;padding:13px;border-radius:10px;font-size:14px;font-weight:700;cursor:pointer;font-family:'Plus Jakarta Sans',sans-serif;transition:all .3s;display:flex;align-items:center;justify-content:center;gap:8px}
+.bsub:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(26,107,60,0.3)}
+.smsg{display:none;background:rgba(26,107,60,0.07);border:2px solid var(--h);border-radius:10px;padding:14px;color:var(--h);font-weight:600;font-size:13.5px;text-align:center;margin-top:14px}
+.smsg.show{display:block}
+
+/* FOOTER */
+footer{background:linear-gradient(155deg,#0b3520,#1a6b3c);color:#fff;padding:56px 24px 22px}
+.fg2{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:44px;margin-bottom:44px}
+.fab .flogo{display:flex;align-items:center;gap:10px;margin-bottom:18px}
+.fab .flogo .fc{width:42px;height:42px;background:rgba(255,255,255,0.14);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:19px;font-weight:900}
+.fab .flogo .fn{font-weight:700;font-size:15px}
+.fab p{font-size:13px;color:rgba(255,255,255,0.6);line-height:1.7;margin-bottom:18px}
+.socials{display:flex;gap:9px}
+.socials a{width:34px;height:34px;background:rgba(255,255,255,0.1);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:14px;text-decoration:none;transition:background .2s}
+.socials a:hover{background:rgba(255,255,255,0.24)}
+.fcol h4{font-weight:700;font-size:13px;margin-bottom:14px;color:var(--em);text-transform:uppercase;letter-spacing:1px}
+.fcol ul{list-style:none}
+.fcol ul li{margin-bottom:9px}
+.fcol ul li a{color:rgba(255,255,255,0.62);text-decoration:none;font-size:13px;transition:color .2s;display:flex;align-items:center;gap:5px}
+.fcol ul li a:hover{color:#fff}
+.fbot{max-width:1200px;margin:0 auto;padding-top:22px;border-top:1px solid rgba(255,255,255,0.1);display:flex;justify-content:space-between;align-items:center;font-size:12px;color:rgba(255,255,255,0.4);flex-wrap:wrap;gap:7px}
+
+/* BACK TOP */
+.bkt{position:fixed;bottom:22px;right:22px;width:42px;height:42px;background:var(--h);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:17px;cursor:pointer;text-decoration:none;box-shadow:0 4px 16px rgba(26,107,60,0.4);transition:all .3s;opacity:0;pointer-events:none;z-index:999}
+.bkt.vis{opacity:1;pointer-events:all}
+.bkt:hover{transform:translateY(-4px);background:var(--hm)}
+
+/* SEJARAH */
+#sejarah{background:var(--k)}
+.stl{position:relative;padding-left:38px;max-width:780px}
+.stl::before{content:'';position:absolute;left:11px;top:0;bottom:0;width:3px;background:linear-gradient(to bottom,var(--h),var(--e),var(--h));border-radius:2px}
+.tli{position:relative;margin-bottom:32px;opacity:0;transform:translateX(-18px);transition:all .5s}
+.tli.vis{opacity:1;transform:translateX(0)}
+.tli::before{content:'';position:absolute;left:-32px;top:5px;width:13px;height:13px;border-radius:50%;background:var(--h);border:3px solid #fff;box-shadow:0 0 0 2px var(--h)}
+.tly{font-size:11px;font-weight:700;color:var(--h);text-transform:uppercase;letter-spacing:1px;margin-bottom:3px}
+.tli h4{font-size:16px;font-weight:700;margin-bottom:5px;color:var(--t)}
+.tli p{font-size:13.5px;color:var(--ts);line-height:1.6}
+
+/* RESPONSIVE */
+@media(max-width:1000px){
+  .pgrid{grid-template-columns:1fr;gap:30px}
+  .vmgrid{grid-template-columns:1fr}
+  .stop{grid-template-columns:1fr 1fr}
+  .kpd-grid{grid-template-columns:1fr}
+  .cgrid{grid-template-columns:1fr}
+  .mp-grid{grid-template-columns:1fr}
+  .pot-grid{grid-template-columns:1fr}
+  .ggrid{grid-template-columns:repeat(2,1fr)}
+  .gi:nth-child(5){grid-column:span 1;aspect-ratio:1}
+  .kgrid{grid-template-columns:1fr}
+  .fg2{grid-template-columns:1fr 1fr;gap:28px}
+  .nlinks{display:none}
+  .ham{display:flex}
+  .bgrid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:600px){
+  section{padding:56px 16px}
+  .stop{grid-template-columns:1fr 1fr}
+  .ggrid{grid-template-columns:1fr 1fr}
+  .fg2{grid-template-columns:1fr}
+  .frow{grid-template-columns:1fr}
+  .fbot{flex-direction:column;text-align:center}
+  .olevel{gap:8px}
+  .ocard{min-width:120px;max-width:140px;padding:12px 8px}
+  .bgrid{grid-template-columns:1fr}
+  .hstats{gap:18px}
+}
+</style>
+</head>
+<body>
+
+<!-- TICKER -->
+<div class="ticker-bar">
+  <span class="tb-label">📢 Info</span>
+  <div class="ticker-wrap">
+    <span class="ticker-inner">
+      🌿 Produk unggulan Desa Karangmangu: Durian Lokal, Salak Pondoh Sigaluh, dan Bibit Tanaman Buah &nbsp;|&nbsp;
+      🏥 Posyandu rutin setiap bulan – hubungi bidan desa untuk info jadwal &nbsp;|&nbsp;
+      📋 Pelayanan administrasi: Senin–Jumat 07.30–15.00 WIB &nbsp;|&nbsp;
+      🌾 Sektor pertanian menjadi mata pencaharian utama ±70–80% warga Karangmangu &nbsp;|&nbsp;
+      🏫 Fasilitas pendidikan: TK, SD, dan TPQ tersedia di desa
+    </span>
+  </div>
+</div>
+
+<!-- NAVBAR -->
+<nav id="nb">
+  <div class="ni">
+    <a href="#beranda" class="nlogo">
+      <div class="lc">K</div>
+      <div class="lt">
+        <div class="na">Desa Karangmangu</div>
+        <div class="kc">Kec. Sigaluh,Kab. Banjarnegara</div>
+      </div>
+    </a>
+    <ul class="nlinks">
+      <li><a href="#beranda" class="active">Beranda</a></li>
+      <li><a href="#profil">Profil</a></li>
+      <li><a href="#sejarah">Sejarah</a></li>
+      <li><a href="#struktur">Organisasi</a></li>
+      <li><a href="#statistik">Kependudukan</a></li>
+      <li><a href="#umkm">Potensi</a></li>
+      <li><a href="#fasilitas">Fasilitas</a></li>
+      <li><a href="#galeri">Galeri</a></li>
+      <li><a href="#kontak" class="ncta">Kontak</a></li>
+    </ul>
+    <button class="ham" id="hamBtn" onclick="togMenu()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="mmenu" id="mMenu">
+  <a href="#beranda" onclick="closeM()">🏠 Beranda</a>
+  <a href="#profil" onclick="closeM()">🏡 Profil & Identitas Desa</a>
+  <a href="#sejarah" onclick="closeM()">📜 Sejarah Desa</a>
+  <a href="#struktur" onclick="closeM()">👥 Struktur Organisasi</a>
+  <a href="#statistik" onclick="closeM()">📊 Kependudukan</a>
+  <a href="#umkm" onclick="closeM()">🌿 Potensi Desa</a>
+  <a href="#fasilitas" onclick="closeM()">🏛️ Fasilitas Umum</a>
+  <a href="#galeri" onclick="closeM()">🖼️ Galeri</a>
+  <a href="#pengumuman" onclick="closeM()">📰 Berita</a>
+  <a href="#kontak" onclick="closeM()">📞 Kontak</a>
+</div>
+
+<!-- HERO -->
+<section id="beranda">
+  <div class="hbg"></div>
+  <div class="hleaf">🌿</div>
+  <div class="hero-in">
+    <div class="hbadge"><i class="fas fa-map-marker-alt"></i> Kecamatan Sigaluh, Kabupaten Banjarnegara, Jawa Tengah</div>
+    <h1 class="htitle">Desa<br><span class="acc">Karangmangu</span></h1>
+    <p class="hsub">Desa yang subur dan asri di Kecamatan Sigaluh — dengan kekayaan hasil perkebunan, pertanian pangan, dan keharmonisan masyarakatnya.</p>
+    <div class="hstats">
+      <div class="hstat"><span class="num" data-target="839">0</span><span class="lbl">Total Penduduk</span></div>
+      <div class="hstat"><span class="num" data-target="412">0</span><span class="lbl">Laki-laki</span></div>
+      <div class="hstat"><span class="num" data-target="427">0</span><span class="lbl">Perempuan</span></div>
+      <div class="hstat"><span class="num" data-target="165">0</span><span class="lbl">Hektar Luas</span></div>
+    </div>
+    <div class="hacts">
+      <a href="#profil" class="bp"><i class="fas fa-compass"></i> Jelajahi Desa</a>
+      <a href="#kontak" class="bo"><i class="fas fa-phone-alt"></i> Hubungi Kami</a>
+    </div>
+  </div>
+  <div class="scrl"><i class="fas fa-chevron-down"></i> Scroll</div>
+</section>
+
+<!-- PROFIL / IDENTITAS DESA -->
+<section id="profil">
+  <div class="con">
+    <div class="pgrid">
+      <div class="pimg">
+        <div class="pimgm">🌾
+          <div class="pbadge">
+            <i class="fas fa-users"></i>
+            <div><div class="pv">839</div><div class="pl">Jiwa Penduduk</div></div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="stag"><i class="fas fa-id-card"></i> Identitas Desa</div>
+        <h2 class="stitle">Profil <span class="g">Desa Karangmangu</span></h2>
+        <div class="pinfo">
+          <div class="pcard">
+            <h4><i class="fas fa-signature"></i> Nama Desa</h4>
+            <p><strong>Desa Karangmangu</strong> — Kecamatan Sigaluh, Kabupaten Banjarnegara, Provinsi Jawa Tengah.</p>
+          </div>
+          <div class="pcard">
+            <h4><i class="fas fa-ruler-combined"></i> Luas Wilayah</h4>
+            <p>Memiliki luas wilayah kurang lebih <strong>165 Hektar</strong>, mencakup lahan pertanian, perkebunan, permukiman, dan area sungai.</p>
+          </div>
+          <div class="pcard">
+            <h4><i class="fas fa-compass"></i> Letak Geografis / Batas Wilayah</h4>
+            <table class="batas-table">
+              <tr><td>Utara</td><td>Berbatasan dengan Desa Wanacipta</td></tr>
+              <tr><td>Selatan</td><td>Berbatasan dengan Kecamatan Banjarnegara</td></tr>
+              <tr><td>Barat</td><td>Berbatasan dengan Desa Singamerta</td></tr>
+              <tr><td>Timur</td><td>Berbatasan dengan Desa Kemiri</td></tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- VISI MISI -->
+    <div style="margin-top:16px">
+      <h2 class="stitle" style="text-align:center;margin-bottom:6px">Visi & <span class="g">Misi</span></h2>
+      <p class="sdesc" style="text-align:center;margin:0 auto 0">Landasan gerak pembangunan Desa Karangmangu menuju desa yang maju dan sejahtera</p>
+    </div>
+    <div class="vmgrid">
+      <div class="vmcard">
+        <div class="ico"><i class="fas fa-eye"></i></div>
+        <h3>Visi</h3>
+        <p>"Terwujudnya Desa Karangmangu yang Maju, Mandiri, Sejahtera, dan Berbudaya berdasarkan Iman dan Taqwa."</p>
+      </div>
+      <div class="vmcard">
+        <div class="ico"><i class="fas fa-tasks"></i></div>
+        <h3>Misi</h3>
+        <ul>
+          <li>Meningkatkan kualitas SDM melalui pendidikan dan kesehatan</li>
+          <li>Mengembangkan potensi ekonomi lokal dan produk unggulan desa</li>
+          <li>Membangun infrastruktur desa yang merata dan berkualitas</li>
+          <li>Melestarikan nilai budaya dan kearifan lokal masyarakat</li>
+          <li>Mewujudkan tata kelola pemerintahan yang transparan dan akuntabel</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SEJARAH -->
+<section id="sejarah">
+  <div class="con">
+    <div class="stag"><i class="fas fa-scroll"></i> Sejarah</div>
+    <h2 class="stitle">Sejarah <span class="g">Desa Karangmangu</span></h2>
+    <p class="sdesc">Perjalanan panjang terbentuknya Desa Karangmangu dari masa ke masa</p>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start">
+      <div class="stl">
+        <div class="tli"><div class="tly">± Abad XVIII</div><h4>Asal Usul Nama</h4><p>Karangmangu berasal dari kata "Karang" (tempat tinggal/batu) dan "Mangu" (berpikir/ragu). Konon wilayah ini merupakan tempat singgah para leluhur yang sedang bermusyawarah panjang.</p></div>
+        <div class="tli"><div class="tly">± 1830</div><h4>Pembentukan Desa</h4><p>Desa Karangmangu secara resmi terbentuk dengan sistem pemerintahan desa yang mulai tertata. Wilayah ini berkembang sebagai kawasan pertanian dan perkebunan subur.</p></div>
+        <div class="tli"><div class="tly">1945–1950</div><h4>Era Kemerdekaan</h4><p>Warga Karangmangu aktif berpartisipasi dalam perjuangan kemerdekaan. Sistem pemerintahan desa mulai berjalan demokratis dengan pemilihan kepala desa.</p></div>
+        <div class="tli"><div class="tly">1980–2000</div><h4>Pembangunan & Modernisasi</h4><p>Infrastruktur desa mulai dibangun — jalan desa, irigasi, dan fasilitas pendidikan. Listrik masuk desa pada tahun 1988. Sekolah SD dan TPQ berdiri di era ini.</p></div>
+        <div class="tli"><div class="tly">2020–Sekarang</div><h4>Era Dana Desa & Digitalisasi</h4><p>Pemanfaatan dana desa untuk pembangunan jalan, jembatan, dan pemberdayaan masyarakat. Digitalisasi layanan administrasi desa mulai diterapkan.</p></div>
+      </div>
+      <div>
+        <div style="background:#fff;border-radius:var(--r);padding:28px;box-shadow:var(--sh)">
+          <div style="font-size:44px;text-align:center;margin-bottom:16px">🏛️</div>
+          <h3 style="font-family:'Playfair Display',serif;font-size:18px;text-align:center;margin-bottom:14px;color:var(--h)">Kepala Desa Saat Ini</h3>
+          <div style="text-align:center;margin-bottom:20px">
+            <div style="width:72px;height:72px;background:linear-gradient(135deg,var(--h),var(--hm));border-radius:50%;margin:0 auto 10px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:28px">👤</div>
+            <div style="font-weight:700;font-size:17px;margin-bottom:3px">Kepala Desa</div>
+            <div style="font-size:13px;color:var(--ts)">Desa Karangmangu</div>
+            <div style="font-size:12px;color:var(--h);margin-top:3px;font-weight:600">Kecamatan Sigaluh</div>
+          </div>
+          <div style="border-top:1px solid rgba(0,0,0,0.06);padding-top:16px;display:flex;flex-direction:column;gap:9px">
+            <div style="display:flex;justify-content:space-between;font-size:13.5px"><span style="color:var(--ts)">Kabupaten</span><span style="font-weight:700">Banjarnegara</span></div>
+            <div style="display:flex;justify-content:space-between;font-size:13.5px"><span style="color:var(--ts)">Provinsi</span><span style="font-weight:700">Jawa Tengah</span></div>
+            <div style="display:flex;justify-content:space-between;font-size:13.5px"><span style="color:var(--ts)">Luas Wilayah</span><span style="font-weight:700">±165 Hektar</span></div>
+            <div style="display:flex;justify-content:space-between;font-size:13.5px"><span style="color:var(--ts)">Kode Pos</span><span style="font-weight:700">53472</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STRUKTUR ORGANISASI -->
+<section id="struktur">
+  <div class="con">
+    <div class="stag"><i class="fas fa-sitemap"></i> Pemerintahan</div>
+    <h2 class="stitle">Struktur <span class="g">Organisasi Desa</span></h2>
+    <p class="sdesc">Susunan pemerintahan Desa Karangmangu, Kecamatan Sigaluh</p>
+    <div class="otree">
+      <div class="olevel">
+        <div class="ocard kpd"><div class="oav">👤</div><div class="on">Kepala Desa</div><div class="ot">Pimpinan Desa</div></div>
+      </div>
+      <div class="olevel">
+        <div class="ocard"><div class="oav">👤</div><div class="on">Sekretaris Desa</div><div class="ot">Sekdes</div></div>
+      </div>
+      <div class="olevel">
+        <div class="ocard"><div class="oav">👤</div><div class="on">Kaur Umum & TU</div><div class="ot">Tata Usaha</div></div>
+        <div class="ocard"><div class="oav">👤</div><div class="on">Kaur Keuangan</div><div class="ot">Keuangan</div></div>
+        <div class="ocard"><div class="oav">👤</div><div class="on">Kaur Perencanaan</div><div class="ot">Perencanaan</div></div>
+      </div>
+      <div class="olevel">
+        <div class="ocard"><div class="oav">👤</div><div class="on">Kasi Pemerintahan</div><div class="ot">Pemerintahan</div></div>
+        <div class="ocard"><div class="oav">👤</div><div class="on">Kasi Kesejahteraan</div><div class="ot">Kesejahteraan</div></div>
+        <div class="ocard"><div class="oav">👤</div><div class="on">Kasi Pelayanan</div><div class="ot">Pelayanan</div></div>
+      </div>
+      <div class="olevel">
+        <div class="ocard" style="background:rgba(26,107,60,0.05)"><div class="oav" style="font-size:16px">🏘️</div><div class="on">Kepala Dusun I</div><div class="ot">Kadus</div></div>
+        <div class="ocard" style="background:rgba(26,107,60,0.05)"><div class="oav" style="font-size:16px">🏘️</div><div class="on">Kepala Dusun II</div><div class="ot">Kadus</div></div>
+        <div class="ocard" style="background:rgba(26,107,60,0.05)"><div class="oav" style="font-size:16px">🏘️</div><div class="on">Kepala Dusun III</div><div class="ot">Kadus</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- KEPENDUDUKAN -->
+<section id="statistik">
+  <div class="con">
+    <div class="stag"><i class="fas fa-chart-bar"></i> Data</div>
+    <h2 class="stitle">Kependudukan <span class="g">Desa Karangmangu</span></h2>
+    <p class="sdesc">Data kependudukan resmi Desa Karangmangu, Kecamatan Sigaluh</p>
+
+    <!-- 4 angka utama -->
+    <div class="stop">
+      <div class="sbig"><div class="ico"><i class="fas fa-users"></i></div><span class="val counter" data-target="839">0</span><span class="lab">Total Penduduk</span></div>
+      <div class="sbig"><div class="ico"><i class="fas fa-male"></i></div><span class="val counter" data-target="412">0</span><span class="lab">Laki-laki</span></div>
+      <div class="sbig"><div class="ico"><i class="fas fa-female"></i></div><span class="val counter" data-target="427">0</span><span class="lab">Perempuan</span></div>
+      <div class="sbig"><div class="ico"><i class="fas fa-map"></i></div><span class="val counter" data-target="165">0</span><span class="lab">Luas (Hektar)</span></div>
+    </div>
+
+    <!-- Detail jumlah penduduk + pendidikan -->
+    <div class="kpd-grid">
+      <div class="kpd-card">
+        <h3><i class="fas fa-users"></i> Jumlah Penduduk</h3>
+        <div class="kpd-row"><span class="kl">Laki-laki</span><span class="kv">412 Jiwa</span></div>
+        <div class="kpd-row"><span class="kl">Perempuan</span><span class="kv">427 Jiwa</span></div>
+        <div class="kpd-row" style="background:rgba(26,107,60,0.05);border-radius:8px;padding:8px 10px;border:none;margin-top:6px">
+          <span class="kl" style="font-weight:700;color:var(--t)">Total Seluruh Penduduk</span>
+          <span class="kv" style="font-size:18px;color:var(--h)">839 Jiwa</span>
+        </div>
+      </div>
+      <div class="kpd-card">
+        <h3><i class="fas fa-graduation-cap"></i> Estimasi Tingkat Pendidikan</h3>
+        <div class="kpd-row"><span class="kl">SD / Belum Tamat SD</span><span class="kv">± 40–45%</span></div>
+        <div class="kpd-row"><span class="kl">SMP / Sederajat</span><span class="kv">± 25–30%</span></div>
+        <div class="kpd-row"><span class="kl">SMA / SMK / Sederajat</span><span class="kv">± 20–25%</span></div>
+        <div class="kpd-row"><span class="kl">Perguruan Tinggi (Diploma/S1)</span><span class="kv">± 3–5%</span></div>
+        <p style="font-size:11.5px;color:var(--ts);margin-top:10px;font-style:italic">*didominasi usia tua untuk kategori SD</p>
+      </div>
+    </div>
+
+    <!-- Chart bar pendidikan + usia -->
+    <div class="cgrid">
+      <div class="ccard">
+        <h3><i class="fas fa-graduation-cap"></i> Pendidikan (Estimasi)</h3>
+        <div class="bch">
+          <div class="bi"><div class="bl"><span>SD / Belum Tamat SD</span><span>±42%</span></div><div class="bt"><div class="bf e" data-w="42"></div></div></div>
+          <div class="bi"><div class="bl"><span>SMP / Sederajat</span><span>±27%</span></div><div class="bt"><div class="bf e" data-w="27"></div></div></div>
+          <div class="bi"><div class="bl"><span>SMA / SMK / Sederajat</span><span>±22%</span></div><div class="bt"><div class="bf e" data-w="22"></div></div></div>
+          <div class="bi"><div class="bl"><span>Perguruan Tinggi (D3/S1)</span><span>±4%</span></div><div class="bt"><div class="bf e" data-w="4"></div></div></div>
+        </div>
+      </div>
+      <div class="ccard">
+        <h3><i class="fas fa-chart-pie"></i> Komposisi Jenis Kelamin</h3>
+        <div class="bch">
+          <div class="bi"><div class="bl"><span>Laki-laki (412 jiwa)</span><span>49.1%</span></div><div class="bt"><div class="bf" data-w="49"></div></div></div>
+          <div class="bi"><div class="bl"><span>Perempuan (427 jiwa)</span><span>50.9%</span></div><div class="bt"><div class="bf" data-w="51" style="background:linear-gradient(90deg,#c05080,#e0709a)"></div></div></div>
+        </div>
+        <div style="margin-top:20px;display:grid;grid-template-columns:1fr 1fr;gap:12px">
+          <div style="background:var(--k);border-radius:10px;padding:14px;text-align:center">
+            <div style="font-size:24px;font-weight:900;color:var(--h);font-family:'Playfair Display',serif">412</div>
+            <div style="font-size:12px;color:var(--ts)">Laki-laki</div>
+          </div>
+          <div style="background:var(--k);border-radius:10px;padding:14px;text-align:center">
+            <div style="font-size:24px;font-weight:900;color:#c05080;font-family:'Playfair Display',serif">427</div>
+            <div style="font-size:12px;color:var(--ts)">Perempuan</div>
+          </div>
+        </div>
+      </div>
+      <div class="ccard">
+        <h3><i class="fas fa-briefcase"></i> Mata Pencaharian</h3>
+        <div class="bch">
+          <div class="bi"><div class="bl"><span>Pertanian & Perkebunan</span><span>±75%</span></div><div class="bt"><div class="bf b" data-w="75"></div></div></div>
+          <div class="bi"><div class="bl"><span>Perdagangan & Jasa</span><span>±12%</span></div><div class="bt"><div class="bf b" data-w="12"></div></div></div>
+          <div class="bi"><div class="bl"><span>Buruh Bangunan & Transport</span><span>±6%</span></div><div class="bt"><div class="bf b" data-w="6"></div></div></div>
+          <div class="bi"><div class="bl"><span>Sektor Formal (PNS/TNI/Guru)</span><span>±2%</span></div><div class="bt"><div class="bf b" data-w="2"></div></div></div>
+        </div>
+        <p class="cnote">Pertanian dominan: ±400–500 orang dari angkatan kerja</p>
+      </div>
+    </div>
+
+    <!-- Mata Pencaharian detail -->
+    <div class="mp-card">
+      <h3><i class="fas fa-briefcase"></i> Detail Mata Pencaharian</h3>
+      <div class="mp-grid">
+        <div class="mp-item">
+          <div class="mt">🌾 Sektor Pertanian & Perkebunan</div>
+          <div class="md">Petani pemilik & buruh tani. Mencapai sekitar <strong>70–80%</strong> dari total angkatan kerja.</div>
+          <div class="mp">± 400–500 orang</div>
+        </div>
+        <div class="mp-item">
+          <div class="mt">🛒 Sektor Perdagangan & Jasa</div>
+          <div class="md">Pedagang buah, pemilik warung, pengepul hasil tani. Sekitar <strong>10–15%</strong> angkatan kerja.</div>
+          <div class="mp">± 60–90 orang</div>
+        </div>
+        <div class="mp-item">
+          <div class="mt">🔨 Sektor Buruh Bangunan & Transportasi</div>
+          <div class="md">Buruh bangunan dan transportasi lokal. Sekitar <strong>5–8%</strong> angkatan kerja.</div>
+          <div class="mp">± 30–50 orang</div>
+        </div>
+        <div class="mp-item">
+          <div class="mt">🏛️ Sektor Formal</div>
+          <div class="md">PNS, TNI/Polri, Guru, Perangkat Desa. <strong>Sangat minoritas</strong>, sekitar 2–3%.</div>
+          <div class="mp">± 15–20 orang</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- POTENSI DESA -->
+<section id="umkm">
+  <div class="con">
+    <div class="stag"><i class="fas fa-seedling"></i> Potensi Desa</div>
+    <h2 class="stitle">Potensi <span class="g">Desa Karangmangu</span></h2>
+    <p class="sdesc">Sumber daya alam, produk unggulan, dan kondisi pariwisata Desa Karangmangu</p>
+    <div class="pot-grid">
+      <!-- SDA -->
+      <div class="pot-col">
+        <div class="pc-head">
+          <div class="pc-ico"><i class="fas fa-leaf"></i></div>
+          <div class="pc-title">Sumber Daya Alam</div>
+        </div>
+        <div class="pot-item">
+          <div class="pot-num">1</div>
+          <div class="pot-text"><strong>Hasil Perkebunan Buah</strong> — Durian, salak, dan berbagai buah tropis yang tumbuh subur di lahan perkebunan desa.</div>
+        </div>
+        <div class="pot-item">
+          <div class="pot-num">2</div>
+          <div class="pot-text"><strong>Sektor Pertanian (Pangan)</strong> — Padi, jagung, dan palawija sebagai sumber pangan utama warga.</div>
+        </div>
+        <div class="pot-item">
+          <div class="pot-num">3</div>
+          <div class="pot-text"><strong>Air Bersih dan Aliran Sungai</strong> — Sumber air alami yang mendukung irigasi pertanian dan kebutuhan harian warga.</div>
+        </div>
+      </div>
+
+      <!-- Produk Unggulan -->
+      <div class="pot-col">
+        <div class="pc-head">
+          <div class="pc-ico"><i class="fas fa-star"></i></div>
+          <div class="pc-title">Produk Unggulan</div>
+        </div>
+        <div class="pot-item">
+          <div class="pot-num">1</div>
+          <div class="pot-text"><strong>🌵 Durian Lokal Karangmangu</strong> — Durian khas Karangmangu dengan cita rasa manis dan legit, menjadi komoditas andalan desa.</div>
+        </div>
+        <div class="pot-item">
+          <div class="pot-num">2</div>
+          <div class="pot-text"><strong>🍈 Salak Pondoh Sigaluh</strong> — Salak pondoh premium dari kawasan Sigaluh, dikenal dengan rasa manis dan tekstur renyah.</div>
+        </div>
+        <div class="pot-item">
+          <div class="pot-num">3</div>
+          <div class="pot-text"><strong>🌱 Bibit Tanaman Buah (Holtikultura)</strong> — Pembibitan tanaman buah lokal sebagai produk unggulan pendukung sektor perkebunan.</div>
+        </div>
+      </div>
+
+      <!-- Pariwisata -->
+      <div class="pot-col">
+        <div class="pc-head">
+          <div class="pc-ico"><i class="fas fa-camera"></i></div>
+          <div class="pc-title">Pariwisata</div>
+        </div>
+        <div class="pariwisata-note">
+          <i class="fas fa-map-signs"></i>
+          <p><strong>Sejauh ini tidak ada pariwisata yang ada di Desa Karangmangu.</strong></p>
+          <p style="margin-top:8px">Namun potensi alam berupa perkebunan buah, hamparan sawah, dan aliran sungai dapat dikembangkan menjadi agrowisata di masa mendatang.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FASILITAS UMUM -->
+<section id="fasilitas">
+  <div class="con">
+    <div class="stag"><i class="fas fa-building"></i> Sarana & Prasarana</div>
+    <h2 class="stitle">Fasilitas <span class="g">Umum Desa</span></h2>
+    <p class="sdesc">Sarana dan prasarana yang tersedia di Desa Karangmangu untuk mendukung kehidupan masyarakat</p>
+    <div class="fas-list">
+      <div class="fas-item">
+        <div class="fas-num">01</div>
+        <div class="fas-emo">🏫</div>
+        <div class="fas-body">
+          <div class="ft">Sekolah (TK, SD dan TPQ)</div>
+          <div class="fd">Sarana pendidikan formal dan non-formal untuk anak-anak dan warga desa</div>
+        </div>
+      </div>
+      <div class="fas-item">
+        <div class="fas-num">02</div>
+        <div class="fas-emo">🛣️</div>
+        <div class="fas-body">
+          <div class="ft">Infrastruktur (Jembatan, Jalan Desa dan Jalan Lingkungan)</div>
+          <div class="fd">Akses jalan dan jembatan penghubung antar wilayah dan dusun di dalam desa</div>
+        </div>
+      </div>
+      <div class="fas-item">
+        <div class="fas-num">03</div>
+        <div class="fas-emo">🕌</div>
+        <div class="fas-body">
+          <div class="ft">Tempat Ibadah (Masjid, Musholla)</div>
+          <div class="fd">Sarana ibadah yang tersebar di berbagai wilayah dan dusun desa untuk kebutuhan spiritual warga</div>
+        </div>
+      </div>
+      <div class="fas-item">
+        <div class="fas-num">04</div>
+        <div class="fas-emo">🏥</div>
+        <div class="fas-body">
+          <div class="ft">Fasilitas Kesehatan (Bidan Desa dan Posyandu)</div>
+          <div class="fd">Layanan kesehatan dasar bagi ibu hamil, bayi, balita, dan warga desa secara umum</div>
+        </div>
+      </div>
+      <div class="fas-item">
+        <div class="fas-num">05</div>
+        <div class="fas-emo">🏛️</div>
+        <div class="fas-body">
+          <div class="ft">Kantor Balai Desa Karangmangu</div>
+          <div class="fd">Pusat pelayanan administrasi, pemerintahan, dan kegiatan kemasyarakatan desa</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALERI -->
+<section id="galeri">
+  <div class="con">
+    <div class="stag"><i class="fas fa-images"></i> Dokumentasi</div>
+    <h2 class="stitle">Galeri <span class="g">Desa</span></h2>
+    <p class="sdesc">Foto dan dokumentasi kegiatan serta keindahan Desa Karangmangu</p>
+    <div class="gfil">
+      <button class="fbtn active" onclick="filGal('all',this)">Semua</button>
+      <button class="fbtn" onclick="filGal('alam',this)">Alam & Pertanian</button>
+      <button class="fbtn" onclick="filGal('kegiatan',this)">Kegiatan Desa</button>
+      <button class="fbtn" onclick="filGal('budaya',this)">Budaya</button>
+      <button class="fbtn" onclick="filGal('infra',this)">Infrastruktur</button>
+    </div>
+    <div class="ggrid">
+      <div class="gi" data-cat="alam">🌾<div class="gover"><i class="fas fa-search-plus"></i></div><div class="gcap">Sawah Padi Karangmangu</div></div>
+      <div class="gi" data-cat="kegiatan">🎪<div class="gover"><i class="fas fa-search-plus"></i></div><div class="gcap">Gotong Royong Warga</div></div>
+      <div class="gi" data-cat="budaya">🎭<div class="gover"><i class="fas fa-search-plus"></i></div><div class="gcap">Seni Budaya Lokal</div></div>
+      <div class="gi" data-cat="infra">🏗️<div class="gover"><i class="fas fa-search-plus"></i></div><div class="gcap">Pembangunan Jalan Desa</div></div>
+      <div class="gi" data-cat="alam" style="grid-column:span 2;aspect-ratio:2">🌄<div class="gover"><i class="fas fa-search-plus"></i></div><div class="gcap">Pemandangan Alam Karangmangu</div></div>
+      <div class="gi" data-cat="kegiatan">👩‍👩‍👧‍👦<div class="gover"><i class="fas fa-search-plus"></i></div><div class="gcap">Posyandu Balita</div></div>
+      <div class="gi" data-cat="alam">🌵<div class="gover"><i class="fas fa-search-plus"></i></div><div class="gcap">Kebun Durian Lokal Karangmangu</div></div>
+      <div class="gi" data-cat="kegiatan">🏫<div class="gover"><i class="fas fa-search-plus"></i></div><div class="gcap">Kegiatan Pendidikan Desa</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- BERITA -->
+<section id="pengumuman" style="background:#fff">
+  <div class="con">
+    <div class="stag"><i class="fas fa-newspaper"></i> Informasi</div>
+    <h2 class="stitle">Berita & <span class="g">Pengumuman</span></h2>
+    <p class="sdesc">Informasi terkini seputar kegiatan dan pembangunan Desa Karangmangu</p>
+    <div class="bgrid">
+      <div class="bcard"><div class="bhead">🌿</div><div class="bbody"><div class="bdate">2024</div><h3>Panen Durian Lokal Karangmangu Musim Ini Melimpah</h3><p>Produk unggulan desa — durian lokal Karangmangu — mengalami panen melimpah. Para petani berhasil memasarkan ke berbagai daerah di Banjarnegara.</p><span class="btag">Pertanian</span></div></div>
+      <div class="bcard"><div class="bhead">🛣️</div><div class="bbody"><div class="bdate">2024</div><h3>Pembangunan Jalan Lingkungan Desa Selesai Dikerjakan</h3><p>Infrastruktur jalan lingkungan desa berhasil diselesaikan menggunakan Dana Desa, memperlancar akses warga menuju lahan pertanian.</p><span class="btag">Infrastruktur</span></div></div>
+      <div class="bcard"><div class="bhead">🏥</div><div class="bbody"><div class="bdate">2024</div><h3>Posyandu Rutin Bulanan Berjalan Lancar</h3><p>Kegiatan posyandu yang rutin diselenggarakan bidan desa dan kader posyandu berhasil melayani ibu hamil, bayi, dan balita di Karangmangu.</p><span class="btag">Kesehatan</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- KONTAK -->
+<section id="kontak">
+  <div class="con">
+    <div class="stag"><i class="fas fa-envelope"></i> Hubungi Kami</div>
+    <h2 class="stitle">Kontak & <span class="g">Pengaduan</span></h2>
+    <p class="sdesc">Layanan administrasi dan pengaduan masyarakat Desa Karangmangu</p>
+    <div class="kgrid">
+      <div>
+        <div class="kinfo">
+          <h3>Kantor Balai Desa Karangmangu</h3>
+          <div class="kitem"><div class="kico"><i class="fas fa-map-marker-alt"></i></div><div><div class="klb">Alamat</div><div class="kvl">Desa Karangmangu, Kecamatan Sigaluh,<br>Kabupaten Banjarnegara, Jawa Tengah 53472</div></div></div>
+          <div class="kitem"><div class="kico"><i class="fas fa-phone-alt"></i></div><div><div class="klb">Telepon</div><div class="kvl">(0286) 594XXX</div></div></div>
+          <div class="kitem"><div class="kico"><i class="fas fa-envelope"></i></div><div><div class="klb">Email</div><div class="kvl">desa.karangmangu@gmail.com</div></div></div>
+          <div class="kitem"><div class="kico"><i class="fas fa-clock"></i></div><div><div class="klb">Jam Pelayanan</div><div class="kvl">Senin – Jumat: 07.30 – 15.00 WIB<br>Sabtu: 07.30 – 12.00 WIB</div></div></div>
+        </div>
+        <div class="mapbox"><i class="fas fa-map-marked-alt"></i><span>Desa Karangmangu, Kec. Sigaluh</span><span style="font-size:12px;color:var(--ts)">Kabupaten Banjarnegara, Jawa Tengah</span></div>
+      </div>
+      <div class="fcard">
+        <h3>📝 Form Kontak & Pengaduan</h3>
+        <div class="frow">
+          <div class="fg"><label>Nama Lengkap *</label><input type="text" id="f_nama" placeholder="Nama Anda"></div>
+          <div class="fg"><label>No. HP / WhatsApp *</label><input type="tel" id="f_hp" placeholder="08xx-xxxx-xxxx"></div>
+        </div>
+        <div class="fg"><label>Email</label><input type="email" id="f_email" placeholder="email@contoh.com"></div>
+        <div class="fg">
+          <label>Jenis Pesan *</label>
+          <select id="f_jenis">
+            <option value="">-- Pilih Jenis Pesan --</option>
+            <option>Pertanyaan Umum</option>
+            <option>Permohonan Surat / Administrasi</option>
+            <option>Pengaduan / Saran</option>
+            <option>Informasi Bantuan Sosial</option>
+            <option>Pelaporan Kejadian</option>
+          </select>
+        </div>
+        <div class="fg"><label>Isi Pesan *</label><textarea id="f_pesan" placeholder="Tuliskan pesan, pertanyaan, atau pengaduan Anda..."></textarea></div>
+        <button class="bsub" onclick="kirim()"><i class="fas fa-paper-plane"></i> Kirim Pesan</button>
+        <div class="smsg" id="smsg">✅ Pesan berhasil dikirim! Tim kami akan merespons dalam 1×24 jam.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="fg2">
+    <div class="fab">
+      <div class="flogo"><div class="fc">K</div><div class="fn">Desa Karangmangu</div></div>
+      <p>Website resmi Desa Karangmangu, Kecamatan Sigaluh, Kabupaten Banjarnegara. Melayani masyarakat dengan transparan, informatif, dan profesional.</p>
+      <div class="socials">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+    <div class="fcol">
+      <h4>Menu Utama</h4>
+      <ul>
+        <li><a href="#beranda"><i class="fas fa-chevron-right"></i> Beranda</a></li>
+        <li><a href="#profil"><i class="fas fa-chevron-right"></i> Profil Desa</a></li>
+        <li><a href="#sejarah"><i class="fas fa-chevron-right"></i> Sejarah</a></li>
+        <li><a href="#struktur"><i class="fas fa-chevron-right"></i> Organisasi</a></li>
+        <li><a href="#statistik"><i class="fas fa-chevron-right"></i> Kependudukan</a></li>
+      </ul>
+    </div>
+    <div class="fcol">
+      <h4>Layanan</h4>
+      <ul>
+        <li><a href="#umkm"><i class="fas fa-chevron-right"></i> Potensi Desa</a></li>
+        <li><a href="#fasilitas"><i class="fas fa-chevron-right"></i> Fasilitas Umum</a></li>
+        <li><a href="#galeri"><i class="fas fa-chevron-right"></i> Galeri</a></li>
+        <li><a href="#pengumuman"><i class="fas fa-chevron-right"></i> Berita</a></li>
+        <li><a href="#kontak"><i class="fas fa-chevron-right"></i> Pengaduan</a></li>
+      </ul>
+    </div>
+    <div class="fcol">
+      <h4>Pemerintahan</h4>
+      <ul>
+        <li><a href="#"><i class="fas fa-chevron-right"></i> Kec. Sigaluh</a></li>
+        <li><a href="#"><i class="fas fa-chevron-right"></i> Kab. Banjarnegara</a></li>
+        <li><a href="#"><i class="fas fa-chevron-right"></i> Prov. Jawa Tengah</a></li>
+        <li><a href="#"><i class="fas fa-chevron-right"></i> Kemendesa RI</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="fbot">
+    <span>© 2025 Pemerintah Desa Karangmangu, Kec. Sigaluh, Banjarnegara.</span>
+    <span>Dibuat oleh Peserta Didik X PPLG 1 – SMK Negeri 1 Bawang</span>
+  </div>
+</footer>
+
+<!-- BACK TO TOP -->
+<a href="#beranda" class="bkt" id="bkt"><i class="fas fa-arrow-up"></i></a>
+
+<script>
+// NAVBAR SCROLL
+window.addEventListener('scroll',function(){
+  const nb=document.getElementById('nb');
+  const bt=document.getElementById('bkt');
+  if(window.scrollY>60){nb.classList.add('scrolled');bt.classList.add('vis')}
+  else{nb.classList.remove('scrolled');bt.classList.remove('vis')}
+  // active link
+  document.querySelectorAll('section[id]').forEach(s=>{
+    const top=s.offsetTop-100,bot=top+s.offsetHeight;
+    if(window.scrollY>=top&&window.scrollY<bot){
+      document.querySelectorAll('.nlinks a').forEach(a=>{
+        a.classList.remove('active');
+        if(a.getAttribute('href')==='#'+s.id)a.classList.add('active');
+      });
+    }
+  });
+});
+
+// MOBILE MENU
+function togMenu(){
+  document.getElementById('hamBtn').classList.toggle('open');
+  document.getElementById('mMenu').classList.toggle('open');
+}
+function closeM(){
+  document.getElementById('hamBtn').classList.remove('open');
+  document.getElementById('mMenu').classList.remove('open');
+}
+
+// COUNTER
+function animCtr(el){
+  const target=parseInt(el.getAttribute('data-target'));
+  const step=target/(2000/16);
+  let cur=0;
+  const t=setInterval(()=>{
+    cur+=step;
+    if(cur>=target){cur=target;clearInterval(t)}
+    el.textContent=Math.floor(cur).toLocaleString('id-ID');
+  },16);
+}
+
+// INTERSECTION OBSERVER
+const obs=new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      const el=e.target;
+      if(el.classList.contains('counter')||el.classList.contains('num')){animCtr(el);obs.unobserve(el)}
+      if(el.classList.contains('bf')){el.style.width=el.getAttribute('data-w')+'%';obs.unobserve(el)}
+      if(el.classList.contains('tli')){el.classList.add('vis');obs.unobserve(el)}
+    }
+  });
+},{threshold:0.2});
+document.querySelectorAll('.counter,.num,.bf,.tli').forEach(el=>obs.observe(el));
+
+// GALERI FILTER
+function filGal(cat,btn){
+  document.querySelectorAll('.fbtn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.gi').forEach(item=>{
+    if(cat==='all'||item.getAttribute('data-cat')===cat){
+      item.style.display='flex';
+      item.style.opacity='0';item.style.transform='scale(0.9)';
+      setTimeout(()=>{item.style.transition='all .3s';item.style.opacity='1';item.style.transform='scale(1)'},50);
+    } else {item.style.display='none'}
+  });
+}
+
+// FORM
+function kirim(){
+  const n=document.getElementById('f_nama').value.trim();
+  const h=document.getElementById('f_hp').value.trim();
+  const j=document.getElementById('f_jenis').value;
+  const p=document.getElementById('f_pesan').value.trim();
+  if(!n||!h||!j||!p){alert('Mohon lengkapi semua field yang wajib (*)');return}
+  const btn=document.querySelector('.bsub');
+  btn.innerHTML='<i class="fas fa-spinner fa-spin"></i> Mengirim...';
+  btn.disabled=true;
+  setTimeout(()=>{
+    btn.innerHTML='<i class="fas fa-paper-plane"></i> Kirim Pesan';
+    btn.disabled=false;
+    document.getElementById('smsg').classList.add('show');
+    ['f_nama','f_hp','f_email','f_pesan'].forEach(id=>document.getElementById(id).value='');
+    document.getElementById('f_jenis').value='';
+    setTimeout(()=>document.getElementById('smsg').classList.remove('show'),5000);
+  },1500);
+}
+
+// SMOOTH SCROLL
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click',function(e){
+    const h=this.getAttribute('href');
+    if(h!=='#'){
+      e.preventDefault();
+      const t=document.querySelector(h);
+      if(t)window.scrollTo({top:t.offsetTop-64,behavior:'smooth'});
+    }
+  });
+});
+</script>
+</body>
+</html>
